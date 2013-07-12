@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05B3E1C8178FCD30006850F0 /* nlua_news.c in Sources */ = {isa = PBXBuildFile; fileRef = 05B3E1C4178FCD30006850F0 /* nlua_news.c */; };
+		05B3E1C9178FCD30006850F0 /* slots.c in Sources */ = {isa = PBXBuildFile; fileRef = 05B3E1C6178FCD30006850F0 /* slots.c */; };
 		078F0DF81367D1AE0000064F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078F0DF71367D1AE0000064F /* OpenAL.framework */; };
 		078F0EA51367DFA10000064F /* Vorbis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078F0EA41367DFA10000064F /* Vorbis.framework */; };
 		078F0EA91367DFAC0000064F /* Vorbis.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 078F0EA41367DFA10000064F /* Vorbis.framework */; };
@@ -254,10 +256,10 @@
 		7389C5D41556ED4C0052022A /* sound_sdlmix.c in Sources */ = {isa = PBXBuildFile; fileRef = 07DA1FA414FF79CC00567A5D /* sound_sdlmix.c */; };
 		7389C6861556FB9E0052022A /* SDL_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7389C6851556FB9E0052022A /* SDL_mixer.framework */; };
 		7389C6A71556FC060052022A /* SDL_mixer.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7389C6851556FB9E0052022A /* SDL_mixer.framework */; };
-		7389CE5B15572EBF0052022A /* freetype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7389CE5A15572EBF0052022A /* freetype.framework */; };
-		7389CEBA15572ED30052022A /* freetype.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7389CE5A15572EBF0052022A /* freetype.framework */; };
-		73F1007D154F82E10047827A /* libpng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F1007C154F82E10047827A /* libpng.framework */; };
-		73F10084154F83240047827A /* libpng.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 73F1007C154F82E10047827A /* libpng.framework */; };
+		7389CE5B15572EBF0052022A /* FreeType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7389CE5A15572EBF0052022A /* FreeType.framework */; };
+		7389CEBA15572ED30052022A /* FreeType.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 7389CE5A15572EBF0052022A /* FreeType.framework */; };
+		73F1007D154F82E10047827A /* libpng12.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F1007C154F82E10047827A /* libpng12.framework */; };
+		73F10084154F83240047827A /* libpng12.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 73F1007C154F82E10047827A /* libpng12.framework */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -269,9 +271,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7389CEBA15572ED30052022A /* freetype.framework in Copy Frameworks */,
+				7389CEBA15572ED30052022A /* FreeType.framework in Copy Frameworks */,
 				7389C6A71556FC060052022A /* SDL_mixer.framework in Copy Frameworks */,
-				73F10084154F83240047827A /* libpng.framework in Copy Frameworks */,
+				73F10084154F83240047827A /* libpng12.framework in Copy Frameworks */,
 				078F0EC21367E0D20000064F /* Ogg.framework in Copy Frameworks */,
 				078F0EA91367DFAC0000064F /* Vorbis.framework in Copy Frameworks */,
 				079260841046AF44000A716C /* SDL.framework in Copy Frameworks */,
@@ -282,6 +284,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05B3E1C4178FCD30006850F0 /* nlua_news.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nlua_news.c; sourceTree = "<group>"; };
+		05B3E1C5178FCD30006850F0 /* nlua_news.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nlua_news.h; sourceTree = "<group>"; };
+		05B3E1C6178FCD30006850F0 /* slots.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = slots.c; sourceTree = "<group>"; };
+		05B3E1C7178FCD30006850F0 /* slots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slots.h; sourceTree = "<group>"; };
 		078F0DF71367D1AE0000064F /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		078F0EA41367DFA10000064F /* Vorbis.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vorbis.framework; path = /Library/Frameworks/Vorbis.framework; sourceTree = "<absolute>"; };
 		078F0EBE1367E0CC0000064F /* Ogg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Ogg.framework; path = /Library/Frameworks/Ogg.framework; sourceTree = "<absolute>"; };
@@ -713,8 +719,8 @@
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7389C3E51556D0050052022A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = /usr/lib/libxml2.dylib; sourceTree = "<absolute>"; };
 		7389C6851556FB9E0052022A /* SDL_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_mixer.framework; path = /Library/Frameworks/SDL_mixer.framework; sourceTree = "<absolute>"; };
-		7389CE5A15572EBF0052022A /* freetype.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = freetype.framework; path = /Library/Frameworks/freetype.framework; sourceTree = "<absolute>"; };
-		73F1007C154F82E10047827A /* libpng.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libpng.framework; path = /Library/Frameworks/libpng.framework; sourceTree = "<absolute>"; };
+		7389CE5A15572EBF0052022A /* FreeType.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FreeType.framework; path = /Library/Frameworks/FreeType.framework; sourceTree = "<absolute>"; };
+		73F1007C154F82E10047827A /* libpng12.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libpng12.framework; path = /Library/Frameworks/libpng12.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* naev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = naev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -724,8 +730,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7389CE5B15572EBF0052022A /* freetype.framework in Frameworks */,
-				73F1007D154F82E10047827A /* libpng.framework in Frameworks */,
+				7389CE5B15572EBF0052022A /* FreeType.framework in Frameworks */,
+				73F1007D154F82E10047827A /* libpng12.framework in Frameworks */,
 				07B064D7104427EB006FECBB /* OpenGL.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				07B066581044397F006FECBB /* SDL.framework in Frameworks */,
@@ -880,6 +886,10 @@
 		07DA1E9F14FF79CC00567A5D /* src */ = {
 			isa = PBXGroup;
 			children = (
+				05B3E1C4178FCD30006850F0 /* nlua_news.c */,
+				05B3E1C5178FCD30006850F0 /* nlua_news.h */,
+				05B3E1C6178FCD30006850F0 /* slots.c */,
+				05B3E1C7178FCD30006850F0 /* slots.h */,
 				07DA1EA014FF79CC00567A5D /* ai.c */,
 				07DA1EA114FF79CC00567A5D /* ai.h */,
 				07DA1EA214FF79CC00567A5D /* ai_extra.h */,
@@ -1210,7 +1220,7 @@
 			children = (
 				7389C6851556FB9E0052022A /* SDL_mixer.framework */,
 				7389C3E51556D0050052022A /* libxml2.dylib */,
-				73F1007C154F82E10047827A /* libpng.framework */,
+				73F1007C154F82E10047827A /* libpng12.framework */,
 				07DA1E9D14FF6BF400567A5D /* Lua.framework */,
 				078F0EBE1367E0CC0000064F /* Ogg.framework */,
 				078F0EA41367DFA10000064F /* Vorbis.framework */,
@@ -1218,7 +1228,7 @@
 				07B066571044397F006FECBB /* SDL.framework */,
 				07B0632710441732006FECBB /* OpenGL.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				7389CE5A15572EBF0052022A /* freetype.framework */,
+				7389CE5A15572EBF0052022A /* FreeType.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -1309,10 +1319,11 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "naev" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
@@ -1594,6 +1605,8 @@
 				07DA206714FF79CD00567A5D /* weapon.c in Sources */,
 				7389C5D31556ED430052022A /* music_sdlmix.c in Sources */,
 				7389C5D41556ED4C0052022A /* sound_sdlmix.c in Sources */,
+				05B3E1C8178FCD30006850F0 /* nlua_news.c in Sources */,
+				05B3E1C9178FCD30006850F0 /* slots.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1649,7 +1662,7 @@
 					"-DUSE_SDLMIX",
 				);
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970 x86_64";
 				VMAJOR = 0;
 				VMINOR = 5;
@@ -1662,15 +1675,18 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks",
+					/Library/Frameworks,
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"../../src/**",
@@ -1692,7 +1708,7 @@
 				OPENAL_ALC_H = "\"\\\"alc.h\\\"\"";
 				OPENAL_AL_H = "\"\\\"al.h\\\"\"";
 				PRODUCT_NAME = naev;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				USE_OPENAL = 1;
 				VALID_ARCHS = "i386 ppc x86_64";
 			};
@@ -1733,7 +1749,7 @@
 					"-DOPENAL_AL_H=$(OPENAL_AL_H)",
 					"-DOPENAL_ALC_H=$(OPENAL_ALC_H)",
 				);
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				USE_OPENAL = 1;
 				VMAJOR = 0;
 				VMINOR = 5;
@@ -1746,13 +1762,16 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks",
+					/Library/Frameworks,
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"../../src/**",
@@ -1770,7 +1789,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = naev;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 			};
 			name = "x86_64-Release";
 		};
@@ -1779,16 +1798,18 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks",
+					/Library/Frameworks,
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_VERSION = 4.0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"../../src/**",
@@ -1810,7 +1831,7 @@
 				OPENAL_ALC_H = "\"\\\"alc.h\\\"\"";
 				OPENAL_AL_H = "\"\\\"al.h\\\"\"";
 				PRODUCT_NAME = naev;
-				SDKROOT = macosx10.4;
+				SDKROOT = macosx;
 				USE_OPENAL = 1;
 				VALID_ARCHS = "i386 ppc x86_64";
 			};
@@ -1821,14 +1842,16 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks",
+					/Library/Frameworks,
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_VERSION = 4.0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"../../src/**",
@@ -1846,7 +1869,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = naev;
-				SDKROOT = macosx10.4;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -1880,7 +1903,7 @@
 					"-DUSE_SDLMIX",
 				);
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970 x86_64";
 				VMAJOR = 0;
 				VMINOR = 5;
@@ -1923,7 +1946,7 @@
 					"-DOPENAL_AL_H=$(OPENAL_AL_H)",
 					"-DOPENAL_ALC_H=$(OPENAL_ALC_H)",
 				);
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				USE_OPENAL = 1;
 				VMAJOR = 0;
 				VMINOR = 5;
