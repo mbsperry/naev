@@ -1301,7 +1301,7 @@
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				07B06597104433E8006FECBB /* Copy Frameworks */,
-				07B0665B10443991006FECBB /* ShellScript */,
+				07B0665B10443991006FECBB /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -1357,18 +1357,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		07B0665B10443991006FECBB /* ShellScript */ = {
+		07B0665B10443991006FECBB /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ ${CONFIGURATION} == \"Debug\" ]\nthen\n\tnaev=${PROJECT_DIR}/../..\n\tdebug=\"${TARGET_BUILD_DIR}/naev.app/Contents/Resources\"\n\t\n\tif [ ! -d ${debug}/gfx ] || [ ! -d ${debug}/dat ]  || [ ! -d ${debug}/ai ] || [ ! -d ${debug}/extras ]\n\tthen\n        ln -s ${naev}/gfx ${debug}/gfx\n\t\tln -s ${naev}/dat ${debug}/dat\n\t\tln -s ${naev}/ai ${debug}/ai\n\t\tln -s ${naev}/extras ${debug}/extras\n\t\tln -s ${naev}/scripts ${debug}/scripts\n\t\tln -s ${naev}/snd ${debug}/snd\n\tfi\nfi\n\necho \"Attempting to sanitize frameworks for packaging\"\n\n## Strip unnecessary architectures from libraries before packaging, as well as remove\n## any header files\n# First find if we are doing x86_64\napp_name=\"naev\"\ntemp_test=`file ${TARGET_BUILD_DIR}/${app_name}.app/Contents/MacOS/${app_name} | grep -o x86_64`\nlipo_flag=\"-remove\"\n\nif [ ! -z \"$temp_test\" ]; then\n  lipo_flag=\"-extract\"\n  echo \"stripping all but x86_64\"\nfi\n\n# Go to the frameworks directory\npushd \"${TARGET_BUILD_DIR}/${app_name}.app/Contents/Frameworks/\"\n\necho \"== You are here: $( pwd )\"\n\n# Do the strip!\nfor fw_dir in `ls -d *.framework`\ndo\n  # echo \"$fw_dir\"\n  fw_name=\"${fw_dir%\\.framework}\"\n  # echo \"$fw_name\"\n  pushd \"$fw_dir/Versions/A\"\n  cp \"$fw_name\" \"$fw_name\".orig\n  lipo \"$fw_name\".orig \"$lipo_flag\" x86_64 -output \"$fw_name\"\n  rm \"$fw_name\".orig\n  popd\ndone\n\n# Now clean up the headers\n# find . -type f -name '*.h' -exec rm -f {} \\;\n\npopd\n\n";
+			shellScript = "if [ ${CONFIGURATION} == \"Debug\" ]\nthen\n\tnaev=${PROJECT_DIR}/../..\n\tdebug=\"${TARGET_BUILD_DIR}/naev.app/Contents/Resources\"\n    app=\"${TARGET_BUILD_DIR}/naev.app\"\n\t\n\tif [ ! -d ${debug}/gfx ] || [ ! -d ${debug}/dat ]  || [ ! -d ${debug}/ai ] || [ ! -d ${debug}/extras ]\n\tthen\n        ln -s ${naev}/gfx ${debug}/gfx\n\t\tln -s ${naev}/dat ${debug}/dat\n\t\tln -s ${naev}/ai ${debug}/ai\n\t\tln -s ${naev}/extras ${debug}/extras\n\t\tln -s ${naev}/scripts ${debug}/scripts\n\t\tln -s ${naev}/snd ${debug}/snd\n\tfi\nfi\n\nif [ -L ${naev}/build/naev.app ]\n    then\n        echo \"Removing old symlink\"\n        rm ${naev}/build/naev.app\nfi\n\nln -s ${app} ${naev}/build\n\necho \"Attempting to sanitize frameworks for packaging\"\n\n## Strip unnecessary architectures from libraries before packaging, as well as remove\n## any header files\n# First find if we are doing x86_64\n<<COMMENT\nsanitize=0\n\nif [ sanitize == 1 ]\nthen\n\napp_name=\"naev\"\ntemp_test=`file ${TARGET_BUILD_DIR}/${app_name}.app/Contents/MacOS/${app_name} | grep -o x86_64`\nlipo_flag=\"-remove\"\n\nif [ ! -z \"$temp_test\" ]; then\n  lipo_flag=\"-extract\"\n  echo \"stripping all but x86_64\"\nfi\n\n# Go to the frameworks directory\npushd \"${TARGET_BUILD_DIR}/${app_name}.app/Contents/Frameworks/\"\n\necho \"== You are here: $( pwd )\"\n\n# Do the strip!\nfor fw_dir in `ls -d *.framework`\ndo\n  # echo \"$fw_dir\"\n  fw_name=\"${fw_dir%\\.framework}\"\n  # echo \"$fw_name\"\n  pushd \"$fw_dir/Versions/A\"\n  cp \"$fw_name\" \"$fw_name\".orig\n  lipo \"$fw_name\".orig \"$lipo_flag\" x86_64 -output \"$fw_name\"\n  rm \"$fw_name\".orig\n  popd\ndone\n\n# Now clean up the headers\n# find . -type f -name '*.h' -exec rm -f {} \\;\n\npopd\nfi\nCOMMENT\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
