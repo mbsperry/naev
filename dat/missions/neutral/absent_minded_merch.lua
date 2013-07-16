@@ -18,6 +18,7 @@ else -- Default to English
 -- Mission details. We store some text for the mission with specific variables.
    misn_title = "The Absent-minded Merchant" 
    misn_reward = 50000
+   misn_time_limit = 3
    misn_desc = "Help a fellow merchant make a rush delivery"
 
    npc_name = "Capt. Jerry"
@@ -62,7 +63,7 @@ function create ()
    target_world_sys = system.get("Gamma Polaris")
    target_world = planet.get("Polaris Prime")
 
-   misn.setNPC( "A Merchant", "unique/jorek" )
+   misn.setNPC( "A Merchant", "neutral/male1" )
    misn.setDesc( bar_desc )
 
 end
@@ -99,9 +100,16 @@ function accept ()
       cargoID = misn.cargoAdd(cargo_name, 10)
       -- Markers indicate a target system on the map, it may not be needed
       -- depending on the type of mission you're writing.
-      misn.markerAdd( target_world_sys, "high" ) --change as appropriate to point to a system object and marker style.
+      misn.markerAdd( target_world_sys, "low" ) --change as appropriate to point to a system object and marker style.
 
       tk.msg( title[2], string.format( text[2], target_world:name(), merch_origin:name()) )
+
+      deadline = time.get() + time.create(0, misn_time_limit, 0)
+
+      osdMsg = {}
+      osdMsg[1] = string.format("Urgent delivery of food to %s", target_world:name() )
+      osdMsg[2] = "You have %s remaining" 
+      misn.osdCreate( "Cargo Run", {osdMsg[1], string.format(osdMsg[2], time.str(deadline - time.get()))})
 
       hook.land("land")
     else
