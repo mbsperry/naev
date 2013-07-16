@@ -770,5 +770,13 @@
    <location>Bar</location>
   </avail>
  </mission>
+ <mission name="Absent-minded merchant">
+   <lua>neutral/absent_minded_merch</lua>
+   <avail>
+     <chance>100></chance>
+     <location>Bar</location>
+     <planet>Manuel Station</planet>
+   </avail>
+ </mission>
 
 </Missions>
