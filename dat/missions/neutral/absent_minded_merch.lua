@@ -62,7 +62,7 @@ function create ()
    target_world_sys = system.get("Gamma Polaris")
    target_world = planet.get("Polaris Prime")
 
-   misn.setNPC( "A Merchant", "neutral/male1" )
+   misn.setNPC( "A Merchant", "neutral/unique/absent_merch" )
    misn.setDesc( bar_desc )
 
 end
