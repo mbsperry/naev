@@ -13,14 +13,13 @@ else -- Default to English
 -- This section stores the strings (text) for the mission.
 
 -- Bar information, describes how the person appears in the bar
-   bar_desc = "A disheveled merchant Captain is glancing nervously around the room. You're not sure why, but for some reason you feel the need to talk to him."
+   bar_desc = "A disheveled merchant Captain is pacing the bar, looking at his watch, and muttering to himself. You feel sorry for the worried Captain, and wonder if you could help in some way."
 
 -- Mission details. We store some text for the mission with specific variables.
    misn_title = "The Absent-minded Merchant" 
    misn_reward = 50000
    misn_time_limit = 3
    misn_desc = "Help a fellow merchant make a rush delivery"
-
    npc_name = "Capt. Jerry"
    cargo_name = "Food"
 
