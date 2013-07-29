@@ -775,7 +775,7 @@
    <avail>
      <chance>100></chance>
      <location>Bar</location>
-     <planet>Manuel Station</planet>
+     <faction>Empire</faction>
    </avail>
  </mission>
 
