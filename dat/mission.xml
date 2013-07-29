@@ -772,7 +772,17 @@
  </mission>
  <mission name="Absent-minded merchant">
    <lua>neutral/absent_minded_merch</lua>
+   <flags> <unique /></flags>
    <avail>
+     <chance>100></chance>
+     <location>Bar</location>
+     <faction>Empire</faction>
+   </avail>
+ </mission>
+ <mission name="Return of the absent-minded merchant">
+   <lua>neutral/absent_merch2</lua>
+   <avail>
+     <cond>player.misnDone("Absent-minded merchant")</cond>
      <chance>100></chance>
      <location>Bar</location>
      <faction>Empire</faction>
