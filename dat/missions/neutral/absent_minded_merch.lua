@@ -2,6 +2,7 @@
 
    MISSION: Absent-minded Merchant
    DESCRIPTION: From the wiki mission ideas. A merchant with a slow ship suddenly realizes he can't make the delivery and implores the player (with a fast ship presumed) to do it for him. Since he has to look good with his employers he'll pay the player a bonus if he does it.
+   CONTACT: matt <mbsperry@gmail.com>
 
 --]]
 
